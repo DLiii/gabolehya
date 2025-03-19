@@ -233,17 +233,26 @@
 </head>
 
 <body>
-    <audio id="bgMusic" autoplay loop style="display: none;">
-        <source src="https://files.catbox.moe/ogf962.mp3" type="audio/mpeg">
-    </audio>
-    
-	<div class="overlay">
+   <audio id="bgMusic" loop style="display: none;">
+    <source src="https://files.catbox.moe/ogf962.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Overlay loading -->
+<div class="overlay">
     <div class="loading-message">Hai kamu!<br>Tunggu dulu ya..</div>
-     <div id="loveIn" class="blocklove">
+    <div id="loveIn" class="blocklove">
         <a href="#" target="_blank" class="lovein"></a>
         <p id="ket">Sentuh LOVEnya!</p>
-     </div>
-   </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("click", function() {
+        let bgMusic = document.getElementById("bgMusic");
+        bgMusic.play();
+    }, { once: true }); // Hanya butuh 1x klik
+</script>
+
    
    <div id="bodyblur">
      <img src="https://feeldreams.github.io/nightin.jpeg" id="wallpaper"/>
