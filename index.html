@@ -233,9 +233,16 @@
 </head>
 
 <body>
-    <audio id="bgMusic" autoplay loop>
-        <source src="https://files.catbox.moe/ogf962.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="bgMusic" loop>
+    <source src="https://files.catbox.moe/ogf962.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener("click", function() {
+        document.getElementById("bgMusic").play();
+    }, { once: true }); // Musik mulai setelah sekali klik
+</script>
+
     
 	<div class="overlay">
     <div class="loading-message">Hai kamu!<br>Tunggu dulu ya..</div>
