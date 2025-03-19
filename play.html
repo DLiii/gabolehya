@@ -232,11 +232,16 @@
 </style>
 </head>
 
-<body>
-    <audio id="bgMusic" autoplay loop>
-        <source src="https://files.catbox.moe/ogf962.mp3" type="audio/mpeg">
-    </audio>
-    
+<audio id="bgMusic" loop>
+    <source src="https://files.catbox.moe/ogf962.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener("click", function() {
+        document.getElementById("bgMusic").play();
+    }, { once: true }); // Memastikan hanya sekali klik yang dibutuhkan
+</script>
+
 
 
   <audio src="shttps://feeldreams.github.io/audio/foreveryoung.mp3" id="linkmp3" class="sembunyi"></audio>
